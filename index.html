@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--tell mobile browsers to make the size of the layout viewport equal to the device width or the size of the screen-->
+    <meta name="viewport" content="width=device-width">
+    <!--to fix this modify the meta element that you just added so that it is as follows-->
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0">
+
+    <title>Living Planet</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Reference jQuery library from Google CND (last version) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Link the script with needed jQuery functions -->
+    <script  src="src/js/map.js"></script>
+    <script  src="src/js/main.js"></script>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="assets/img/logo/logoLP2.png" alt="logo"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="src/php/authenticate.php">OAuth</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="row">
+        <div class="col_map">
+            <div id="map"></div>
+        </div>
+        <div class="col_weather">
+            <h2>CURRENT WEATHER FORECAST</h2>
+            <div id="forecast">
+                <div id="icon"><img id="weather-icon" alt="weather forecast icon" src=""></div>
+                <div id="weather-info">
+                    <h3 id="location"></h3>
+                    <p><span id="temp"></span> &deg;C</p>
+                    <p><span id="desc"></span></p>
+                    <p>Wind Speed: <span id="wind"></span></p>
+                    <p>Relative Humidity: <span id="humidity"></span></p>
+                </div>
+            </div>
+        </div>
+        <div id="distance-info"></div>
+        <div id="directionsPanel"> </div>
+    </div>
+    <div class="row_2">
+        <div class="col_aircomponents">
+            <div id="air-components"></div>
+        </div>
+        <div class="col_extrainfo">
+            <div id="extra-info"></div>
+        </div>
+    </div>
+</main>
+<footer>
+    &copy; 2024 Living Planet. All rights reserved.
+</footer>
+<!--Embed Google Maps JS API. Include the callback at initMap function. Specify the libraries to use (maps and marker)
+The `defer` ensures the browser continues parsing the HTML while the script is downloading, and to execute the script
+ only after parsing is complete causes the callback to execute after the full HTML document has been parsed.-->
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9VkwK0zVgU9dn8RWH00yY-hHI9m_ihgI&callback=initMap&libraries=maps,marker&v=beta"></script>
+</body>
+</html>
