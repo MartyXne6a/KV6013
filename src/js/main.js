@@ -1,7 +1,7 @@
 // Global variable to store the current marker for the location clicked by user
 var currentMarker = null;
-const OWAPIKEY = '6402918b874a7eeeaf45d1b70a41349c';
-const GOOGLEAPIKEY = 'AIzaSyCHX9mxzGnV0GeIWL7d4Er_dsLupYDMQp0';
+const OWAPIKEY = 'YourOpenWeatherAPIkey';
+const GOOGLEAPIKEY = 'YourGoogleAPIkey';
 
 var infoWindowContent = '';
 var table = '';
